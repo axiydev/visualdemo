@@ -12,13 +12,26 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: FlatButton(
-          onPressed: () {
-            Navigator.pushReplacementNamed(context, DetailPage.id);
-          },
-          color: Colors.blue,
-          child: Text('DetailPage'),
-        ),
+      child:Column(
+        children:[
+          Spacer(),
+          FlatButton(
+            child:Text('detail page'),
+            color:Colors.red,
+            onPressed:(){
+              Navigator.pushNamed(context,DetailPage.id);
+              },
+          ),
+       FlatButton(
+           child:Text('ok'),
+           color:Colors.green,
+           onPressed:(){
+             Navigator.pushReplacementNamed(context,DetailPage.id);
+             },
+           ),
+          Spacer(),
+        ],
+      ),
       ),
     );
   }
